@@ -1,13 +1,17 @@
 services:
   zookeeper:
     image: bitnami/zookeeper:3.9
+    image: bitnamilegacy/zookeeper:3.9
+    46dc3be (Add Kafka producer with real-time event simulation)
     environment:
       - ALLOW_ANONYMOUS_LOGIN=yes
     ports:
       - "2181:2181"
 
-  kafka:
+  kafka:D
     image: bitnami/kafka:3.7
+    image: bitnamilegacy/kafka:3.7
+    46dc3be (Add Kafka producer with real-time event simulation)
     depends_on:
       - zookeeper
     ports:
