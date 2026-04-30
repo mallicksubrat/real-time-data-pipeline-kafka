@@ -37,6 +37,6 @@ steps:
       fi
 
   - name: CI completed
-    run: echo "All checks passed "
+    run: echo "All checks passed 🚀"
 ```
 
