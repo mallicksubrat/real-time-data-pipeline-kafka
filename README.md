@@ -22,11 +22,11 @@ Simulate a production-grade real-time data pipeline with local infrastructure an
 ## 🚀 Current Status
 - [x] Repository initialized  
 - [x] Project structure setup  
-- [ ] Kafka setup  
-- [ ] Producer service  
-- [ ] Streaming consumer  
-- [ ] Storage integration  
-- [ ] CI/CD pipeline  
+- [x] Kafka setup  
+- [x] Producer service  
+- [x] Streaming consumer  
+- [x] Storage integration  
+- [x] CI/CD pipeline  
 
 ---
 
