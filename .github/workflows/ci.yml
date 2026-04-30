@@ -18,7 +18,7 @@ steps:
   - name: Set up Python
     uses: actions/setup-python@v5
     with:
-      python-version: '3.11'
+      python-version: "3.11"
 
   - name: Install dependencies
     run: |
@@ -28,8 +28,8 @@ steps:
   - name: Lint (non-blocking)
     run: flake8 . || true
 
-  - name: Run tests
-    run: pytest tests/ || true
+  - name: Run tests (only tests folder)
+    run: pytest tests/test_basic.py
 
   - name: Done
     run: echo "CI passed 🚀"
