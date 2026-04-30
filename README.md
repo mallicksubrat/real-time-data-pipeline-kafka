@@ -40,7 +40,7 @@ Build a **production-style real-time data pipeline** locally that demonstrates:
 - ✅ JSON parsing with schema enforcement  
 - ✅ Real-time aggregation (event counts)  
 - ✅ Data stored in Parquet (analytics-ready format)  
-
+- ✅ Windowed real-time analytics (time-based aggregation)
 ---
 
 ## ▶️ How to Run the Pipeline
