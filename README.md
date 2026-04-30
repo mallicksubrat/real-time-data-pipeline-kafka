@@ -32,3 +32,16 @@ Simulate a production-grade real-time data pipeline with local infrastructure an
 
 ## 📌 Next Step
 Set up Kafka and start streaming real-time events.
+
+## ▶️ How to Run the Pipeline
+
+### 1. Start infrastructure
+```bash
+docker-compose up -d
+python producer/producer.py
+
+spark-submit \
+  --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0 \
+  spark_streaming/consumer.py
+
+/tmp/output
