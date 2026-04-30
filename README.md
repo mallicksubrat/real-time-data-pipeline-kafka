@@ -1,6 +1,6 @@
 # ⚡ Real-Time Data Pipeline (Kafka + Spark)
 
-A real-time data pipeline that ingests streaming events, processes them using **Spark Structured Streaming**, performs real-time aggregations, and stores analytics-ready data.
+A complete real-time data pipeline that ingests streaming events, processes them using **Spark Structured Streaming**, performs real-time aggregations, and stores analytics-ready data.
 
 ---
 
@@ -24,18 +24,22 @@ Producer → Kafka → Spark Streaming → Aggregation → Storage (Parquet)
 
 ## 🎯 Project Goal
 
-Simulate a **production-grade real-time data pipeline** using local infrastructure, focusing on streaming ingestion, transformation, and analytics.
+Build a **production-style real-time data pipeline** locally that demonstrates:
+- streaming ingestion  
+- transformation  
+- real-time analytics  
+- persistent storage  
 
 ---
 
-## 🚀 Current Status
+## 🚀 Features Implemented
 
 - ✅ Kafka cluster running via Docker  
-- ✅ Producer generating real-time events  
-- ✅ Spark Structured Streaming consumer implemented  
+- ✅ Real-time event producer (Python)  
+- ✅ Spark Structured Streaming consumer  
 - ✅ JSON parsing with schema enforcement  
 - ✅ Real-time aggregation (event counts)  
-- ✅ Data stored in Parquet (analytics-ready)  
+- ✅ Data stored in Parquet (analytics-ready format)  
 
 ---
 
@@ -70,17 +74,12 @@ spark-submit \
 ### 4. Verify Output
 
 - Real-time aggregation will appear in the terminal  
-- Processed data is stored in:
-
-```bash
-/tmp/output
-```
-
----
-
-## 📊 Example Output
+- Example:
 
 ```
+-------------------------------------------
+Batch: 0
+-------------------------------------------
 +----------+-----+
 |event_type|count|
 +----------+-----+
@@ -88,6 +87,22 @@ spark-submit \
 |view      | 30  |
 |purchase  | 5   |
 +----------+-----+
+```
+
+---
+
+### 5. Check Stored Data
+
+Processed data is stored locally in:
+
+```bash
+/tmp/output
+```
+
+You can inspect files using:
+
+```bash
+ls /tmp/output
 ```
 
 ---
@@ -106,25 +121,35 @@ real-time-data-pipeline-kafka/
 
 ---
 
-## 📌 Next Steps
-
-- Add windowed aggregations (time-based analytics)  
-- Integrate PostgreSQL for serving layer  
-- Add monitoring and logging  
-- Build dashboard (Streamlit / Grafana)  
-
----
-
-## 🧠 What This Project Demonstrates
+## 📊 What This Project Demonstrates
 
 - Real-time data ingestion using Kafka  
 - Stream processing using Spark Structured Streaming  
-- Schema enforcement and JSON parsing  
-- Stateful aggregations on streaming data  
-- Writing analytics-ready data to storage  
+- Schema-based JSON parsing  
+- Stateful aggregation on streaming data  
+- Writing analytics-ready data to Parquet  
+
+---
+
+## 📚 Key Learnings
+
+- Handling real-time streaming systems end-to-end  
+- Debugging Kafka and Spark integration issues  
+- Understanding Structured Streaming output modes  
+- Designing clean, scalable data pipelines  
+- Managing streaming state and checkpoints  
+
+---
+
+## 📌 Next Steps
+
+- Add time-window based aggregations  
+- Integrate PostgreSQL as a serving layer  
+- Add monitoring/logging  
+- Build dashboard (Streamlit / Grafana)  
 
 ---
 
 ## 🔥 Summary
 
-This project demonstrates how to build an **end-to-end real-time data pipeline**, moving from raw event ingestion to structured analytics-ready output — a core skill in modern data engineering.
+This project demonstrates the ability to design, build, and debug a **real-time data pipeline** from ingestion to analytics-ready storage — a core capability in modern data engineering.
